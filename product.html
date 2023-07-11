@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <section class="text-gray-600 body-font overflow-hidden">
+        <div class="container px-5 py-24 mx-auto">
+          <div class="lg:w-4/5 mx-auto flex flex-wrap">
+            <div class="lg:w-1/2 w-full lg:pr-10 lg:py-6 mb-6 lg:mb-0">
+              <h2 class="text-sm title-font text-gray-500 tracking-widest">Villagers' Products</h2>
+              <h1 class="text-gray-900 text-3xl title-font font-medium mb-4" id="product-name"></h1>
+              <div class="flex mb-4">
+                <a onclick="showDescription()" id="description-link" class="flex-grow text-green-500 border-b-2 border-green-500 py-2 text-lg px-1">Description</a>
+                <a onclick="showReviews()" id="reviews-link" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Reviews</a>
+                <a onclick="showDetails()" id="details-link" class="flex-grow border-b-2 border-gray-300 py-2 text-lg px-1">Details</a>
+              </div>
+              <p id="description" class="leading-relaxed mb-4"></p>
+              <div id="reviews" style="display: none;">
+                <h2 class="text-gray-900 text-lg font-medium mb-2">Reviews</h2>
+                <p class="leading-relaxed"></p>
+              </div>
+              <div id="details" style="display: none;">
+                <h2 class="text-gray-900 text-lg font-medium mb-2">Details</h2>
+                <p class="leading-relaxed"></p>
+              </div>
+            </div>
+            <img id="product-image" alt="ecommerce" class="lg:w-1/2 w-full lg:h-auto h-64 object-cover object-center rounded" src="">
+          </div>
+        </div>
+      </section>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const productId = urlParams.get('id');
+
+        fetch('product.json')
+            .then(response => response.json())
+            .then(data => {
+                const product = data.products.find(item => item.id == productId);
+
+                if (product) {
+                    const productName = document.getElementById('product-name');
+                    const description = document.getElementById('description');
+                    const reviews = document.querySelector('#reviews p');
+                    const details = document.querySelector('#details p');
+                    const productImage = document.getElementById('product-image');
+
+                    productName.textContent = product.name;
+                    description.textContent = product.description;
+                    reviews.textContent = product.reviews[0].comment;
+                    details.textContent = product.details;
+                    productImage.src = product.images[0];
+                } else {
+                    console.log('Product not found');
+                }
+            })
+            .catch(error => {
+                console.log('Error:', error);
+            });
+
+        function showDescription() {
+            document.getElementById("description").style.display = "block";
+            document.getElementById("reviews").style.display = "none";
+            document.getElementById("details").style.display = "none";
+            document.getElementById("description-link").classList.add("text-green-500");
+            document.getElementById("reviews-link").classList.remove("text-green-500");
+            document.getElementById("details-link").classList.remove("text-green-500");
+        }
+
+        function showReviews() {
+            document.getElementById("description").style.display = "none";
+            document.getElementById("reviews").style.display = "block";
+            document.getElementById("details").style.display = "none";
+            document.getElementById("description-link").classList.remove("text-green-500");
+            document.getElementById("reviews-link").classList.add("text-green-500");
+            document.getElementById("details-link").classList.remove("text-green-500");
+        }
+
+        function showDetails() {
+            document.getElementById("description").style.display = "none";
+            document.getElementById("reviews").style.display = "none";
+            document.getElementById("details").style.display = "block";
+            document.getElementById("description-link").classList.remove("text-green-500");
+            document.getElementById("reviews-link").classList.remove("text-green-500");
+            document.getElementById("details-link").classList.add("text-green-500");
+        }
+    </script>
+</body>
+</html>

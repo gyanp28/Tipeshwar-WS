@@ -1,0 +1,73 @@
+
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Handcrafted Pottery",
+      "category": "Pottery",
+      "description": "Explore beautifully handcrafted pottery made by skilled artisans. Each piece showcases intricate designs and exceptional craftsmanship.",
+      "images": [
+        "./images/pot.jpg"
+      ],
+      "price": "$39.99",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur sapien massa, ac placerat nunc pellentesque in. Nullam eu mi ac libero pellentesque luctus in nec urna. Proin faucibus nunc at libero interdum, in tristique mauris congue. Sed in nibh at nulla fermentum tempor. In non purus placerat, rutrum odio nec, egestas metus. Sed hendrerit erat ut elementum vehicula. Phasellus non pharetra ligula, et varius quam. Nam venenatis ipsum sit amet nisi dapibus volutpat. Curabitur scelerisque tincidunt tortor, in sagittis dolor aliquam ac. Suspendisse maximus est et purus dictum posuere. Cras fringilla, lectus at faucibus faucibus, nisl metus tincidunt arcu, sit amet ullamcorper sem ante et lorem.",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "I absolutely love the pottery! The craftsmanship is outstanding."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Fresh Ghee",
+      "category": "Dairy",
+      "description": "Discover unique artisanal jewelry pieces that combine traditional techniques with contemporary designs. Adorn yourself with elegance and style.",
+      "images": [
+        "./images/ghee.jpg"
+      ],
+      "price": "$15.99",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur sapien massa, ac placerat nunc pellentesque in. Nullam eu mi ac libero pellentesque luctus in nec urna. Proin faucibus nunc at libero interdum, in tristique mauris congue. Sed in nibh at nulla fermentum tempor. In non purus placerat, rutrum odio nec, egestas metus. Sed hendrerit erat ut elementum vehicula. Phasellus non pharetra ligula, et varius quam. Nam venenatis ipsum sit amet nisi dapibus volutpat. Curabitur scelerisque tincidunt tortor, in sagittis dolor aliquam ac. Suspendisse maximus est et purus dictum posuere. Cras fringilla, lectus at faucibus faucibus, nisl metus tincidunt arcu, sit amet ullamcorper sem ante et lorem.",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "The jewelry is stunning! I receive compliments every time I wear it."
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Handwoven Textiles",
+      "category": "Textiles",
+      "description": "Experience the beauty of handwoven textiles crafted with precision and care. From vibrant tapestries to delicate fabrics, each piece tells a story.",
+      "images": [
+        "./images/textile.jpg"
+      ],
+      "price": "$59.99",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur sapien massa, ac placerat nunc pellentesque in. Nullam eu mi ac libero pellentesque luctus in nec urna. Proin faucibus nunc at libero interdum, in tristique mauris congue. Sed in nibh at nulla fermentum tempor. In non purus placerat, rutrum odio nec, egestas metus. Sed hendrerit erat ut elementum vehicula. Phasellus non pharetra ligula, et varius quam. Nam venenatis ipsum sit amet nisi dapibus volutpat. Curabitur scelerisque tincidunt tortor, in sagittis dolor aliquam ac. Suspendisse maximus est et purus dictum posuere. Cras fringilla, lectus at faucibus faucibus, nisl metus tincidunt arcu, sit amet ullamcorper sem ante et lorem.",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "The textiles are of excellent quality. I'm impressed with the range of designs available."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "name": "Wooden Crafts",
+      "category": "Woodwork",
+      "description": "Appreciate the artistry of wooden crafts made from sustainable materials. From intricate carvings to functional items, find your perfect piece.",
+      "images": [
+        "./images/woodart.jpg"
+      ],
+      "price": "$49.99",
+      "details": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus consectetur sapien massa, ac placerat nunc pellentesque in. Nullam eu mi ac libero pellentesque luctus in nec urna. Proin faucibus nunc at libero interdum, in tristique mauris congue. Sed in nibh at nulla fermentum tempor. In non purus placerat, rutrum odio nec, egestas metus. Sed hendrerit erat ut elementum vehicula. Phasellus non pharetra ligula, et varius quam. Nam venenatis ipsum sit amet nisi dapibus volutpat. Curabitur scelerisque tincidunt tortor, in sagittis dolor aliquam ac. Suspendisse maximus est et purus dictum posuere. Cras fringilla, lectus at faucibus faucibus, nisl metus tincidunt arcu, sit amet ullamcorper sem ante et lorem.",
+      "reviews": [
+        {
+          "rating": 5,
+          "comment": "The wooden crafts are beautifully made. They make excellent gifts."
+        }
+      ]
+    }
+  ]
+}
